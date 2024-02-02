@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Register first to view available books</h3><br>
+    <a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a><br><br>
+
+    <h3>Already have an account? Login </h3>
+
+    <a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
+    
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+    <header><h1>Welcome to Your Dashboard, {{ user.name }}!</h1> </header>
+
+    <main>
+        <section>
+            <h2>Dashboard</h2>
+            <ul>
+                
+                <li>View available books</li>
+                <p class="m-auto"><a class="btn btn-primary" href="{% url 'booksList' %}">Read Books</a></p>
+                <a class="p-2 text-dark" href="{% url 'logout' %}">Logout</a>
+            </ul>
+        </section>
+    </main>
+
+    </body>
+
+{% endblock content %}

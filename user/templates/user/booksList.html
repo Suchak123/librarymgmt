@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Books List</h1>
+    {% for book in books %}
+    <h1><strong>{{book.title}}</strong></h1>
+    <h5>{{book.publishedDate}}</h5> -- <small>{{book.ISBN}}</small>
+    <h4>Genre: {{book.genre}}</h4>
+    <li>
+        <a href="{% url 'book_detail' book_id=book.BookID %}">View Details</a>
+    </li>
+
+    {% endfor %}
+{% endblock content %}
