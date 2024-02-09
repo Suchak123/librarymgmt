@@ -19,28 +19,13 @@ from django.urls import path, include
 from django.conf import settings 
 
 from user.views import (
-    profile,
-   
-    login_view,
     home_screen_view,
-    logout_view,
-    dashboard,
-    booksCreateView,
-    booksList,
-    book_detail_view
-
 )
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', profile, name='register'),
-    path('books/', booksCreateView, name='books'),
-    path('booksList/', booksList, name='booksList'),
-    path('login/', login_view, name='login'),
-    path('', home_screen_view, name="home"),
-    path('logout/', logout_view, name="logout"),
-    path('dashboard/', dashboard, name="dashboard"),
     path('api/', include('user.api.urls', 'user_api')),
+    path('', home_screen_view, name='home'),
     
 ]
